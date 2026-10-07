@@ -1,91 +1,122 @@
-:root {
-  --primary-color: #f5f5f5;
-  --secondary-color: #2e40a0;
-  --primary-text-color: #000000;
-  --secondary-text-color: #FFFFFF;
-}
-
-
 * {
-  @import url("https://fonts.googleapis.com/css2?family=Edu+QLD+Hand:wght@400..700&family=Lobster+Two:ital,wght@1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+body {
   font-family: "Poppins", sans-serif;
 }
 
-.navbar .logo img{
-    width: 95px;
-    height: 55px;
+a {
+  text-decoration: none;
+  display: inline-block;
 }
 
-.navbar {
-    margin: 25px 35px 25px 35px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.container {
+  width: 80%;
+  margin: 0px auto;
+  padding: 0 15px;
 }
 
-.nav-links ul {
-    display: flex;
-    list-style: none;
-    gap: 50px;
+/* header */
+
+.header-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 0px;
+  border-bottom: 1px solid #d4d4d4;
 }
 
-.getstarted-btn button{
-    width: 177px;
-    height: 55px;
-    font-size: 20px;
-    background: var(--secondary-color);
-    color: var(--secondary-text-color);
-    border-radius: 20px;
-    border: none;
+nav {
+  display: flex;
+  gap: 35px;
 }
 
-header .line {
-    margin: 0 40PX;
-    border-bottom: 1px solid #D4D4D4;
+nav a {
+  color: black;
 }
 
-.hero-section {
-    text-align: center;
+.header-wrapper .btn {
+  background: #2e40a0;
+  color: white;
+  padding: 8px 25px;
+  border-radius: 10px;
 }
 
-.hero-section .heading {
-    margin: 75px 0 0 0;
-    font-weight: bolder;
-    font-size: 50px;
+@media screen and (max-width: 850px) {
+  .header-wrapper {
+    flex-direction: column;
+  }
+  .header-wrapper .logo {
+    margin: 15px 0px;
+  }
+  .header-wrapper .btn {
+    margin: 20px 0px;
+  }
 }
 
-.hero-section .paragraph {
-    margin: 50px 0 0 0 ;
-    font-weight: bold;
-    font-size: 18px;
+/* hero-sec */
+
+.hero-wrapper {
+  text-align: center;
+  padding: 80px 0px;
 }
 
-.hero-section .getstarted-btn-2 {
-    margin: 50px 0 0 0;
+.hero-wrapper h1 {
+  margin-bottom: 15px;
 }
 
-.gallerys {
-    margin: 100px 35px 100px 35px;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 20px;
+.hero-wrapper p {
+  margin-bottom: 20px;
 }
 
-.gallery-iterms {
-    width: 30%;
+.hero-wrapper .btn {
+  background: #2e40a0;
+  color: white;
+  padding: 8px 25px;
+  border-radius: 10px;
 }
 
-.gallery-iterms img {
+/* images-sec */
+.images-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.images-wrapper div {
+  width: 32%;
+  margin-bottom: 25px;
+}
+
+.images-wrapper img {
+  width: 100%;
+}
+
+@media screen and (max-width: 850px) {
+  .images-wrapper div {
+    width: 48%;
+  }
+
+  .images-wrapper img {
     width: 100%;
-    display: block;
+  }
 }
 
+@media screen and (max-width: 610px) {
+  .images-wrapper div {
+    width: 98%;
+  }
+
+  .images-wrapper img {
+    width: 100%;
+  }
+}
+
+/* footer */
 footer p {
-    font-size: 24px;
-    text-align: center;
-    margin: 0 0 100px 0;
+  text-align: center;
+  padding: 30px 0px;
 }
